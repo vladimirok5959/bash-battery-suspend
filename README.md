@@ -10,7 +10,24 @@ BAT_SUSPEND_MSG_PERC="20"
 BAT_SUSPEND_ACT_PERC="15"
 ```
 
-## Installation and usage
+## Installation/Usage
 ```
-#
+sudo wget -O /bin/battery-suspend https://github.com/vladimirok5959/bash-battery-suspend/releases/download/latest/bash-battery-suspend.sh
+sudo chmod +x /bin/battery-suspend
+
+linux:~$ battery-suspend
+/bin/battery-suspend (start|stop|status)
+Status: is not runned
+
+linux:~$ battery-suspend start
+Status: runned
+Alert perc: 20%
+Suspend perc: 15%
+
+linux:~$ battery-suspend status
+Status: runned
+Alert perc: 20%
+Suspend perc: 15%
 ```
+
+I think it will save nerves for someone... By the way, if you know worked method for Ubuntu for controlling battery charge process (enable/disable battery charging) please write me, will be very grateful. Need to thought how to increase battery life, like this did `Asus battery health charging` utility and keep battery level always at 60% when you plugget charger for a long time.
